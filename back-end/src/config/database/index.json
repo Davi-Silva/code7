@@ -1,0 +1,13 @@
+{
+  "development": {
+    "username": "postgres",
+    "password": "davi123pc",
+    "database": "code7",
+    "host": "localhost",
+    "dialect": "postgres",
+    "define": {
+      "timestamps": false,
+      "underscored": true
+    }
+  }
+}
