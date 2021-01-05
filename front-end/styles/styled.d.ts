@@ -11,5 +11,17 @@ declare module 'styled-components' {
     text: string;
 
     borderColor: string;
+    containerBackground: string;
+    button: {
+      delele: string;
+      color: string;
+    };
+    settings: {
+      color: string;
+    };
+    debtStatament: {
+      color: string;
+      borderColor: string;
+    };
   }
 }

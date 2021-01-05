@@ -1,0 +1,23 @@
+{
+  "name": "code7",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Davi-Silva/code7.git",
+  "author": "Davi Silva <davi.cunha.silva.ca@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev:client": "cd front-end && yarn dev",
+    "dependencies:install:client": "cd front-end && yarn install",
+    "dev:postgres": "cd back-end-postgres && yarn dev",
+    "dependencies:install:postgres": "cd back-end-postgres && yarn install",
+    "dev:mongo": "cd back-end-mongodb && yarn dev",
+    "dependencies:install:mongo": "cd back-end-mongodb && yarn install",
+    "concurrently:postgres:dev": "yarn concurrently \"yarn dev:client\" \"yarn dev:postgres\"",
+    "concurrently:mongo:dev": "yarn concurrently \"yarn dev:client\" \"yarn dev:mongo\"",
+    "concurrently:dependencies:postgres:install": "concurrently \"yarn dependencies:install:client\" \"yarn dependencies:install:postgres\"",
+    "concurrently:dependencies:mongo:install": "concurrently \"yarn dependencies:install:client\" \"yarn dependencies:install:mongo\""
+  },
+  "devDependencies": {
+    "concurrently": "^5.3.0"
+  }
+}

@@ -1,7 +1,12 @@
+import Head from 'next/head';
+
 export default function Home() {
   return (
-    <div>
+    <>
+      <Head>
+        <title>Code7</title>
+      </Head>
       <h1>Index</h1>
-    </div>
+    </>
   );
 }

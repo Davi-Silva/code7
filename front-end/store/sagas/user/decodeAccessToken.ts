@@ -1,8 +1,8 @@
 import { call, put } from 'redux-saga/effects';
 
-const getUserInfoFromToken = async (token) => {
+const getUserInfoFromToken = async (token: string) => {
   const res = await fetch(
-    `${process.env.USER_API_ENDPOINT}/user/auth/login/decode/token/${token}`,
+    `${process.env.API_ENDPOINT}/admins/auth/login/decode/token`,
     {
       method: 'GET',
       mode: 'cors',

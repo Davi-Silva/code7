@@ -1,9 +1,7 @@
 import { call, put } from 'redux-saga/effects';
 
 const loginUser = async (userObj) => {
-  console.log(process.env);
-
-  const res = await fetch(`${process.env.USER_API_ENDPOINT}/user/auth/login`, {
+  const res = await fetch(`${process.env.API_ENDPOINT}/admins/auth/login`, {
     method: 'POST',
     mode: 'cors',
     cache: 'no-cache',
@@ -19,7 +17,7 @@ const loginUser = async (userObj) => {
 
 const getUserInfoFromToken = async (token: string) => {
   const res = await fetch(
-    `${process.env.USER_API_ENDPOINT}/user/auth/login/decode/token/${token}`,
+    `${process.env.API_ENDPOINT}/admins/auth/login/decode/token`,
     {
       method: 'GET',
       mode: 'cors',
@@ -38,6 +36,8 @@ const getUserInfoFromToken = async (token: string) => {
 export default function* asyncLoginUserApi(action) {
   try {
     const response = yield call(loginUser, action.payload.userObj);
+
+    console.log('response:', response);
 
     if (response.status_code === 200) {
       if (window.localStorage.getItem('accessToken') !== undefined) {

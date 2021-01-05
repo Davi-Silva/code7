@@ -12,17 +12,14 @@ export default {
     errors: []
   },
   clients: {
-    data: {},
+    data: [],
     loading: false,
     fetched: false,
     errors: []
   },
   app: {
     isMobile: false,
-    dimensions: {
-      width: 0,
-      height: 0
-    },
+    dimensions: [0, 0],
     warnings: []
   },
   navbar: {
